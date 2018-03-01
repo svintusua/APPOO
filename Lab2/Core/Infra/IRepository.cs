@@ -5,20 +5,10 @@ namespace Core.Infra
 {
     public interface IRepository
     {
-        void InitializeData();
-
-        IEnumerable<Movie> GetMoviesFromFile();
-        IEnumerable<Movie> GetMoviesFromList();
-
-        Movie GetMovieByIdFromFile(int id);
-        Movie GetMovieByIdFromList(int id);
-
-        void Log(string message);
-        
-        void UpdateInFile(Movie movie);
-        void UpdateInList(Movie movie);
-
-        void DeleteFromFile(int id);
-        void DeleteFromList(int id);
+        IEnumerable<Movie> GetAllMovies();
+        Movie GetById(int id);
+        void Add(Movie entinty);
+        void Update(Movie entity);
+        void Delete(int id);
     }
 }

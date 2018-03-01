@@ -8,17 +8,16 @@ namespace Lab2
     {
         public static void Main(string[] args)
         {
-            var repo = new MovieRepository();
+            IRepository fileRepo = new MovieFileRepository();
 
-            repo.InitializeData();
-
-            Console.WriteLine("***From List***");
-            repo.GetMoviesFromList()?.PrintToConsole();
+            Console.WriteLine("***From File***");
+            fileRepo.GetAllMovies()?.PrintToConsole();
 
             Console.WriteLine();
 
-            Console.WriteLine("***From File***");
-            repo.GetMoviesFromFile()?.PrintToConsole();
+            IRepository listRepo = new MovieListRepository();
+            Console.WriteLine("***From List***");
+            listRepo.GetAllMovies()?.PrintToConsole();
         }
     }
 }
