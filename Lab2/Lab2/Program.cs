@@ -1,5 +1,6 @@
 ﻿using System;
 using Core;
+using Core.Entities;
 using Core.Infra;
 
 namespace Lab2
@@ -8,14 +9,14 @@ namespace Lab2
     {
         public static void Main(string[] args)
         {
-            IRepository fileRepo = new MovieFileRepository();
+            IRepository<Movie> fileRepo = new MovieRepository(new FileDataProvider());
 
             Console.WriteLine("***From File***");
             fileRepo.GetAllMovies()?.PrintToConsole();
 
             Console.WriteLine();
 
-            IRepository listRepo = new MovieListRepository();
+            IRepository<Movie> listRepo = new MovieRepository(new InMemoryDataProvider());
             Console.WriteLine("***From List***");
             listRepo.GetAllMovies()?.PrintToConsole();
         }

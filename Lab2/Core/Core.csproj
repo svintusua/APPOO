@@ -42,11 +42,13 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="Entities\Movie.cs" />
+    <Compile Include="Infra\InMemoryDataProvider.cs" />
+    <Compile Include="Infra\FileDataProvider.cs" />
+    <Compile Include="Infra\IDataProvider.cs" />
     <Compile Include="Infra\ILogger.cs" />
     <Compile Include="Infra\IRepository.cs" />
     <Compile Include="Infra\Logger.cs" />
-    <Compile Include="Infra\MovieListRepository.cs" />
-    <Compile Include="Infra\MovieFileRepository.cs" />
+    <Compile Include="Infra\MovieRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
-using Core.Entities;
 
 namespace Core.Infra
 {
-    public interface IRepository
+    public interface IRepository<T>
     {
-        IEnumerable<Movie> GetAllMovies();
-        Movie GetById(int id);
-        void Add(Movie entinty);
-        void Update(Movie entity);
+        IEnumerable<T> GetAllMovies();
+        T GetById(int id);
+        void Add(T entinty);
+        void Update(T entity);
         void Delete(int id);
     }
 }
