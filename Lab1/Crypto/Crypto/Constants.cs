@@ -8,9 +8,9 @@ namespace Crypto
 {
     public static class Constants
     {
-        public const string TextNullError = "Отсутсвует текст";
-        public const string CodeWordNullError = "Отсутсвует кодовое слово";
-        public const string TextAndCodeWordNullError = "Отсутсвует текст и кодовое слово";
-        public const string AbsentSymbolsError = "Отсутсвуют символы в словаре: ";
+        public const string TextNullError = "Отсутствует текст";
+        public const string CodeWordNullError = "Отсутствует кодовое слово";
+        public const string TextAndCodeWordNullError = "Отсутствует текст и кодовое слово";
+        public const string AbsentSymbolsError = "Отсутствуют символы в словаре: ";
     }
 }
